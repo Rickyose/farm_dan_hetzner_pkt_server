@@ -7,3 +7,4 @@
 192.155.95.xxx  0 0 0
 ################# HETZNER DEDICATED SERVER ######################
 65.108.126.171 https://raw.githubusercontent.com/Rickyose/farm_dan_hetzner_pkt_server/main/PKT/mullvad1/mullvad_openvpn_linux_all_all.zip 0 0
+74.208.239.189 https://raw.githubusercontent.com/Rickyose/farm_dan_hetzner_pkt_server/main/PKT/mullvad1/mullvad_openvpn_linux_all_all.zip 0 0
