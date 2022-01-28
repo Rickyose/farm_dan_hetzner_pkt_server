@@ -433,7 +433,7 @@ vncserver -kill :1
 sleep 10
 echo sleep 10
 cd /home/ubuntu/farm_dan_hetzner_pkt_server
-cp vnc_farm_dan_hetzner_pkt_server.txt /home/ubuntu/.vnc/xstartup
+cp vnc_unzip_server.txt /home/ubuntu/.vnc/xstartup
 sleep 10
 vncserver
 sleep 360
