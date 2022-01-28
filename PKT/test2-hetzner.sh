@@ -17,6 +17,7 @@ sleep 10
 sleep 6
 ##################################### Install Software Miner ke dua
 cd /home/ubuntu/
+sudo apt install build-essential -y
 if [ ! -d /home/ubuntu/pkt1 ]; then
 	 mkdir pkt1
 	 cd pkt1
