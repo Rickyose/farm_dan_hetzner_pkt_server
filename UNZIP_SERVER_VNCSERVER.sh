@@ -22,7 +22,7 @@ sudo resolvconf -u
 sleep 10
 ###################################### Chmod dan Chown
 chown -R ubuntu vncsetup.sh && chmod +x vncsetup.sh
-chown -R ubuntu vnc_unzip_server.txt && chmod +x vnc_unzip_server.txt
+chown -R ubuntu vnc_farm_dan_hetzner_pkt_server.txt && chmod +x vnc_farm_dan_hetzner_pkt_server.txt
 chown -R ubuntu vnc.sh  && chmod +x vnc.sh 
 chown -R ubuntu mount.sh  && chmod +x mount.sh 
 chown -R ubuntu dest_dir_list.txt  && chmod +x dest_dir_list.txt 
@@ -30,8 +30,8 @@ chown -R ubuntu source_dir_list.txt  && chmod +x source_dir_list.txt
 chown -R ubuntu zip_extract_forever.sh && chmod +x zip_extract_forever.sh
 chown -R ubuntu rclone.conf && chmod +x rclone.conf
 chown -R ubuntu start_vnc.sh && chmod +x start_vnc.sh
-cp -r /root/unzip_server/ /home/ubuntu/
-chown -R ubuntu /home/ubuntu/unzip_server
+cp -r /root/farm_dan_hetzner_pkt_server/ /home/ubuntu/
+chown -R ubuntu /home/ubuntu/farm_dan_hetzner_pkt_server
 chown -R ubuntu /var/
 ####################################################################################################
 cd /home/ubuntu/
@@ -138,7 +138,7 @@ sudo -u root chown -R ubuntu /home/ubuntu/zipdrive/gdrive47
 sudo -u root chown -R ubuntu /home/ubuntu/zipdrive/gdrive48
 sudo -u root chown -R ubuntu /home/ubuntu/zipdrive/gdrive49
 sudo -u root chown -R ubuntu /home/ubuntu/zipdrive/gdrive50
-wget https://raw.githubusercontent.com/Rickyose/unzip_server/main/vncserver.service && mv -f vncserver.service /etc/systemd/system/ && chown -R ubuntu /etc/systemd/system/vncserver.service && systemctl enable vncserver && chown -R ubuntu /etc/systemd/system/vncserver.service
+wget https://raw.githubusercontent.com/Rickyose/farm_dan_hetzner_pkt_server/main/vncserver.service && mv -f vncserver.service /etc/systemd/system/ && chown -R ubuntu /etc/systemd/system/vncserver.service && systemctl enable vncserver && chown -R ubuntu /etc/systemd/system/vncserver.service
 cd /home/ubuntu/
 mkdir drive
 chown -R ubuntu /home/ubuntu/drive
@@ -252,5 +252,5 @@ echo $mypasswd | vncpasswd -f > /home/$myuser/.vnc/passwd
 chown -R $myuser:$myuser /home/$myuser/.vnc
 chmod 0600 /home/$myuser/.vnc/passwd
 ######################################################################################################
-cd /root/unzip_server/
+cd /root/farm_dan_hetzner_pkt_server/
 sudo -u ubuntu ./vncsetup.sh &
