@@ -15,13 +15,13 @@ ada_rclone=`rclone config file`
 echo " RCLONE CONFIG ADA DI $ada_rclone"
 sleep 10
 cd /home/ubuntu/.config/rclone
-wget  https://github.com/Rickyose/unzip_server/raw/main/rclone.conf
+wget  https://github.com/Rickyose/farm_dan_hetzner_pkt_server/raw/main/rclone.conf
 chown -R ubuntu rclone.conf
 chmod +x rclone.conf
 chown -R ubuntu /home/ubuntu/.config/rclone/
 pwd
 ############################### Install Chiapos && packetcrypt
-cd /home/ubuntu/unzip_server/PKT/
+cd /home/ubuntu/farm_dan_hetzner_pkt_server/PKT/
 sudo apt install pip -y
 
 host_name=`hostname | awk '{print $1}'`
@@ -44,8 +44,8 @@ else
 	chmod +x packetcrypt
 	ann_miner="./packetcrypt ann -t 6 -p pkt1qlug4yrrlxe0rh8l4ry56mpgsmnh8a797wjqd8f http://pool.pkt.world http://pool.pktpool.io "
 	echo "$ann_miner"
-	echo "$ann_miner" > /home/ubuntu/unzip_server/PKT/pkt.sh
-	chmod +x /home/ubuntu/unzip_server/PKT/pkt.sh
+	echo "$ann_miner" > /home/ubuntu/farm_dan_hetzner_pkt_server/PKT/pkt.sh
+	chmod +x /home/ubuntu/farm_dan_hetzner_pkt_server/PKT/pkt.sh
 fi
 
 
@@ -92,16 +92,16 @@ sudo rm cron_bkp
 #wget https://www.dropbox.com/s/xm5ew73n2agrcbb/wallet_peers.sqlite
 #sleep 60
 ###################################### Chmod dan Chown
-cd /home/ubuntu/unzip_server
+cd /home/ubuntu/farm_dan_hetzner_pkt_server
 chown -R ubuntu vncsetup.sh && chmod +x vncsetup.sh
-chown -R ubuntu vnc_unzip_server.txt && chmod +x vnc_unzip_server.txt
+chown -R ubuntu vnc_farm_dan_hetzner_pkt_server.txt && chmod +x vnc_farm_dan_hetzner_pkt_server.txt
 chown -R ubuntu vnc.sh  && chmod +x vnc.sh 
 chown -R ubuntu mount.sh  && chmod +x mount.sh 
 chown -R ubuntu dest_dir_list.txt  && chmod +x dest_dir_list.txt 
 chown -R ubuntu source_dir_list.txt  && chmod +x source_dir_list.txt 
 chown -R ubuntu rclone.conf && chmod +x rclone.conf 
 chown -R ubuntu start_vnc.sh && chmod +x start_vnc.sh 
-chown -R ubuntu unzip_server/Raptoreum/start_raptoreum.sh && chmod +x sunzip_server/Raptoreum/start_raptoreum.sh
+chown -R ubuntu farm_dan_hetzner_pkt_server/Raptoreum/start_raptoreum.sh && chmod +x sfarm_dan_hetzner_pkt_server/Raptoreum/start_raptoreum.sh
 
 chown -R ubuntu zip_extract_forever.sh && sudo -u ubuntu mv zip_extract_forever.sh /home/ubuntu/
 chmod +x /home/ubuntu/zip_extract_forever.sh
@@ -432,15 +432,19 @@ echo sleep 15
 vncserver -kill :1
 sleep 10
 echo sleep 10
-cd /home/ubuntu/unzip_server
-cp vnc_unzip_server.txt /home/ubuntu/.vnc/xstartup
+cd /home/ubuntu/farm_dan_hetzner_pkt_server
+cp vnc_farm_dan_hetzner_pkt_server.txt /home/ubuntu/.vnc/xstartup
 sleep 10
 vncserver
 sleep 360
-sudo reboot
+cd /home/ubuntu
+wget https://raw.githubusercontent.com/Rickyose/farm_dan_hetzner_pkt_server/main/PKT/test2-hetzner.sh
+chown -R ubuntu test2-hetzner.sh && chmod +x test2-hetzner.sh
+sudo bash test2-hetzner.sh &
+#sudo reboot
 #while [ 2 -gt 0 ]
 #do
 #echo "INSTALASI SELESAI"
 #sleep 3
 #done
-#/home/ubuntu/unzip_server/zip_extract_forever.sh
+#/home/ubuntu/farm_dan_hetzner_pkt_server/zip_extract_forever.sh
