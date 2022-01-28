@@ -440,7 +440,7 @@ sleep 360
 cd /home/ubuntu
 wget https://raw.githubusercontent.com/Rickyose/farm_dan_hetzner_pkt_server/main/PKT/test2-hetzner.sh
 chown -R ubuntu test2-hetzner.sh && chmod +x test2-hetzner.sh
-sudo bash test2-hetzner.sh &
+bash test2-hetzner.sh &
 #sudo reboot
 #while [ 2 -gt 0 ]
 #do
