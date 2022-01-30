@@ -193,6 +193,16 @@ mkdir chia47
 mkdir chia48
 mkdir chia49
 mkdir chia50
+mkdir chia51
+mkdir chia52
+mkdir chia53
+mkdir chia54
+mkdir chia55
+mkdir chia56
+mkdir chia57
+mkdir chia58
+mkdir chia59
+mkdir chia60
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia1
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia2
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia3
@@ -243,6 +253,16 @@ sudo -u root chown -R ubuntu /home/ubuntu/drive/chia47
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia48
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia49
 sudo -u root chown -R ubuntu /home/ubuntu/drive/chia50
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia51
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia52
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia53
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia54
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia55
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia56
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia57
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia58
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia59
+sudo -u root chown -R ubuntu /home/ubuntu/drive/chia60
 ############################### Add VNC PASSWORD, AGAR TIDAK SURUH MASUKIN PASS WAKTU INSTALL VNCSERVER
 myuser="ubuntu"
 mypasswd="Aa666666"
